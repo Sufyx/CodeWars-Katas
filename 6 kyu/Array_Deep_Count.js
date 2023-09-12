@@ -6,9 +6,8 @@ function deepCount(a) {
     let counter = 0;
     for (let i = 0; i < a.length; i++) {
         counter++;
-        if (Array.isArray(a[i])) {
+        if (Array.isArray(a[i]))
             counter += deepCount(a[i]);
-        }
     }
     return counter;
 }

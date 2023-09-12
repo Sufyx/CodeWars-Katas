@@ -6,12 +6,10 @@ function sumPairs(ints, s) {
     const tracker = {};
     for (let i = 0; i < ints.length; i++) {
         const diff = s - ints[i];
-        if ((typeof tracker[diff] !== 'undefined')) {
+        if ((typeof tracker[diff] !== 'undefined'))
             return ([diff, ints[i]]);
-        }
-        if (!tracker[ints[i]]) {
+        if (!tracker[ints[i]])
             tracker[ints[i]] = i;
-        }
     }
     return undefined;
 }
