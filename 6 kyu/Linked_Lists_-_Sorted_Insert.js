@@ -15,12 +15,15 @@ function sortedInsert(head, data) {
     }
     let curr = head, prev = null;
     while (curr != null) {
-        if ((!prev || data >= prev.data) && (data <= curr.data))
+        if ((!prev || data >= prev.data) && (data <= curr.data)) {
             break;
+        }
         prev = curr;
         curr = curr.next;
     }
-    if (prev) prev.next = node;
+    if (prev) {
+        prev.next = node;
+    }
     node.next = curr;
     return head;
 }

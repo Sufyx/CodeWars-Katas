@@ -20,9 +20,12 @@ function insertNth(head, index, data) {
         curr = curr.next;
         count++;
     }
-    if (count < index)
+    if (count < index) {
         throw new Error("InvalidArgumentException");
+    }
     node.next = curr;
-    if (prev) prev.next = node;
+    if (prev) {
+        prev.next = node;
+    }
     return head;
 }

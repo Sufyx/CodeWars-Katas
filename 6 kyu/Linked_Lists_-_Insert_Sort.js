@@ -15,8 +15,9 @@ function sortedInsert(head, data) {
     }
     let curr = head.next, prev = head;
     while (curr != null) {
-        if ((data >= prev.data) && (data <= curr.data))
+        if ((data >= prev.data) && (data <= curr.data)) {
             break;
+        }
         prev = curr;
         curr = curr.next;
     }
